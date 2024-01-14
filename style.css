@@ -32,7 +32,7 @@ body {
     left: 0;
     width: 100%;
     padding: 2rem 7%;
-    background: turquoise;
+    background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -49,7 +49,7 @@ body {
 .navbar a {
     position: relative;
     font-size: 1.7rem;
-    color: var(--white-color);
+    color: black;
     font-weight: 500;
     margin-right: 3.5rem;
 }
@@ -72,7 +72,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 7% 2rem;
+    padding: 19rem 15% 5rem;
 }
 
 .home {
@@ -149,7 +149,30 @@ section {
     transform: translateY(-50%);
     width: 816px;
     height: 816px;
-    background: red;
     overflow: hidden;
     pointer-events: none;
+}
+
+.home .profession-conteiner .profession-box {
+    position: absolute;
+    /* top: 0; */
+    right: .010%;
+    width: 816px;
+    height: 816px;
+    background: #0F2167;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .profession-box .profession {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #DDE6ED;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    transform-origin: 384px;
 }
