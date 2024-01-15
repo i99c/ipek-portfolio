@@ -36,6 +36,12 @@ body {
     display: flex;
     align-items: center;
     z-index: 100;
+    transition: 0.5s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
 }
 
 .logo {
@@ -49,9 +55,17 @@ body {
 .navbar a {
     position: relative;
     font-size: 1.7rem;
-    color: black;
+    color: rgb(211, 207, 207);
     font-weight: 500;
     margin-right: 3.5rem;
+}
+
+.header.sticky .navbar a {
+    color: var(--text-color);
+}
+
+.header.sticky .navbar a.active {
+    color: var(--main-color);
 }
 
 .navbar a.active::before {
@@ -64,15 +78,25 @@ body {
     background: var(--bg-color);
 }
 
+.header.sticky .navbar a::before {
+    background: var(--main-color);
+    opacity: .7;
+}
+
 #darkMode-icon {
-    font-size: 2.4rem;
+    font-size: 90px !important;
     color: var(--white-color);
     cursor: pointer;
 }
 
+.header.sticky #darkMode-icon {
+    color: var(--text-color);
+    opacity: .9;
+}
+
 section {
     min-height: 100vh;
-    padding: 19rem 15% 5rem;
+    padding: 19rem 10% 5rem;
 }
 
 .home {
@@ -223,4 +247,38 @@ section {
     right: 0;
     width: 38.5%;
     pointer-events: none;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-img img {
+    width: 40vw;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
 }
